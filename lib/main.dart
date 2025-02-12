@@ -168,7 +168,9 @@ class _MainWebViewState extends State<MainWebView> with WidgetsBindingObserver {
   // vv To be setted specified host suffix for check url is own service when load popup browser
   final SERVICE_SUFFIX = "mpsolutions.co.kr";
 
-  String get rootUrl => "https://$SERVICE_HOST/myOwnApplication1.html";
+  // String get rootUrl => "https://$SERVICE_HOST"; // <- Initial Estre UI site when url is index page
+  String get rootUrl =>
+      "https://$SERVICE_HOST/myOwnApplication1.html"; // <- Custom path when url is not index page
   Uri get rootUri => Uri.parse(rootUrl);
 
   // Be setted App name & version on initState for insert to user agent
