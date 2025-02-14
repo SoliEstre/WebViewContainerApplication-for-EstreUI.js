@@ -243,6 +243,8 @@ class _MainWebViewState extends State<MainWebView> with WidgetsBindingObserver {
       // vv or set true bar contrast enforced for apply default half-transparency.
       systemStatusBarContrastEnforced: false,
       systemNavigationBarContrastEnforced: false,
+      // this options only be applied to Android devices.
+      // default setting is matched be same as iOS system UI display style.
     ));
 
     // App link receiver. not recommended change this code.
