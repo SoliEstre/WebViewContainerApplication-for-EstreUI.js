@@ -11,6 +11,7 @@ This project is reference of hybrid mobile application for PWA on Estre UI based
 - Provide option to use InAppWebView (recommended) or WebViewWidget for main web view
 - Common javascript handler method with pre-implemented for which using web view component
 - Insert adapter codes on load page include common communication method on window.app.request()
+- Ready for Edge to edge mode of Android 15. translucent system UI on Android/iOS with Estre UI
 - Back navigation for Estre UI and prevented single trigger exits application by back navigation
 - Estre UI Native Storage. it's access to app's shared preference through pre-implemented JS handler
 - Popup browser(in app browser). when open link on blank target or called window.open()

@@ -228,6 +228,23 @@ class _MainWebViewState extends State<MainWebView> with WidgetsBindingObserver {
   void initState() {
     super.initState();
 
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      // vv Set system bar icon brightness by your Estre UI app background color
+      statusBarIconBrightness:
+          Brightness.dark, //darkMode ? Brightness.light : Brightness.dark,
+      systemNavigationBarIconBrightness:
+          Brightness.dark, //darkMode ? Brightness.light : Brightness.dark,
+      // ^^ set to dark when your site BG are lighten. set light or not.
+      //    or implement custom dark mode toggle your self be with interoperated Estre UI site.
+      // vv or adjust bar color to any you want half-transparency level.
+      statusBarColor: Colors.transparent,
+      systemNavigationBarColor: Colors.transparent,
+      // vv or set true bar contrast enforced for apply default half-transparency.
+      systemStatusBarContrastEnforced: false,
+      systemNavigationBarContrastEnforced: false,
+    ));
+
     // App link receiver. not recommended change this code.
     // for initial uri receive and process when started with app link.
     // custom implement is write in to processAppLinkReceived()
