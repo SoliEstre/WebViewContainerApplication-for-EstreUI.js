@@ -145,12 +145,16 @@ class MainActivity: FlutterActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     private fun createCustomNotificationChannel() {
         val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-        val groupId = "OS_3f02a2fe-ddc5-4436-9dde-9c43e30fb92e"
-        val groupName = "mangoedu"
+        // vv Replace with your OneSignal notification group id (from OneSignal dashboard)
+        val groupId = "Enter_Your_OneSignal_Group_ID_Here"
+        // vv Replace with your adopter app's group name (snake_case)
+        val groupName = "your_app"
         notificationManager.createNotificationChannelGroup(NotificationChannelGroup(groupId, groupName))
 
-        val channelId = "OS_79cafc5b-fc25-40db-a6b1-6413e7445794"
-        val channelName = "mango_push"
+        // vv Replace with your OneSignal notification channel id (from OneSignal dashboard)
+        val channelId = "Enter_Your_OneSignal_Channel_ID_Here"
+        // vv Replace with your push channel name (snake_case)
+        val channelName = "your_app_push"
         val importance = NotificationManager.IMPORTANCE_HIGH
 
         // Delete existing channel and recreate (to change sound settings)
@@ -160,11 +164,13 @@ class MainActivity: FlutterActivity() {
         }
 
         val channel = NotificationChannel(channelId, channelName, importance).apply {
-            description = "MangoEdu Notifications"
+            // vv Replace with your adopter app's user-facing notification description
+            description = "Your App Notifications"
 
             // Sound settings - prioritize .wav file, use default notification sound if not available
             val soundUri = try {
-                val wavUri = "android.resource://$packageName/raw/alarm_mango".toUri()
+                // vv Replace with your custom notification sound asset at android/app/src/main/res/raw/<name>.wav
+                val wavUri = "android.resource://$packageName/raw/your_notification_sound".toUri()
                 contentResolver.openInputStream(wavUri)?.close()
                 wavUri
             } catch (e: Exception) {

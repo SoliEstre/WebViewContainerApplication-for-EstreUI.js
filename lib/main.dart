@@ -270,11 +270,11 @@ class _MainWebViewState extends State<MainWebView> with WidgetsBindingObserver {
   // vv To be setted specified scheme for calling this app's app link
   final SCHEME = "wvca4eui";
   // vv To be setted specified host for communication to your own API server
-  final API_HOST = "estreui.mpsolutions.co.kr";
+  final API_HOST = "estreui.mpsolutions.kr";
   // vv To be setted specified host for your own Estre UI PWA service. it must be fixed url location on main web view
-  final SERVICE_HOST = "estreui.mpsolutions.co.kr";
+  final SERVICE_HOST = "estreui.mpsolutions.kr";
   // vv To be setted specified host suffix for check url is own service when load popup browser
-  final SERVICE_SUFFIX = "mpsolutions.co.kr";
+  final SERVICE_SUFFIX = "mpsolutions.kr";
 
   // String get rootUrl => "https://$SERVICE_HOST"; // <- Initial Estre UI site when url is index page
   String get rootUrl => "https://$SERVICE_HOST/serviceLoader.html";
